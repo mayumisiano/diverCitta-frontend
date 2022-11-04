@@ -1,0 +1,50 @@
+.caixa
+{
+    background-color: #ccb6b5;
+}
+
+.titulo
+{
+    color:#855741 !important;
+    font-weight: bold;
+
+}
+
+.botao
+{
+    border-color: lightslategray;
+    background-color:  #ac8975 !important;
+    color:#6e533e!important;
+    font-weight: "bold";
+}
+
+.postagens
+{
+    background-color: #f9e1e0 !important;
+}
+
+.loginPage
+{
+    width: 100vw;
+    min-height: calc(100vh-64px);
+}
+
+/* paleta de cores interessantes - acrescentem cores que curtam também :) 
+e depois verificamos se está nos padrões de acessibilidade
+#f9e1e0
+#ccb6b5
+#615a67
+#8a638b
+#ebb5de
+#df8cf3
+#582951
+#a13e3e
+#ac8975
+#855741
+#6e533e
+#f5ae90
+#f9c2aa
+#f0946e
+#ea7442
+#ffbd59
+*/

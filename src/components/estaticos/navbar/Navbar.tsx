@@ -20,22 +20,27 @@ function Navbar() {
                                 Home
                             </Typography>
                         </Box>
-                        <Link to='/sobre-nos' className='text-decorator-none'>
-                            <Box mx={1} className='cursor'>
+                        <Box mx={1} style={{cursor: "pointer" }}>
+                            <Typography variant="h6" color="inherit">
+                               Sobre Nós
+                            </Typography>
+                        </Box>
+                        <Box mx={1} style={{cursor: "pointer" }}>
+                            <Typography variant="h6" color="inherit">
+                                Login
+                            </Typography>
+                        </Box>
+                        <Link to='/login' className='text-decorator-none'>
+                            <Box mx={1} className="cursor">
                                 <Typography variant="h6" color="inherit">
-                                    Sobre Nós
+                                    logout
                                 </Typography>
                             </Box>
                         </Link>
-                        
-                        <Link to='/login' className='text-decorator-none'>
-                            <Box mx={1} className='cursor'>
-                                <Typography variant="h6" color="inherit">
-                                    Logout
-                                </Typography>
-                            </Box>
-                        </Link>                        
+
+
                     </Box>
+
                 </Toolbar>
             </AppBar>
         </>

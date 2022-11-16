@@ -9,7 +9,7 @@ import './CadastrarUsuario.css';
 function CadastroUsuario() {
 
     let navigate = useNavigate();
-    const [confirmarSenha,setConfirmarSenha] = useState<String>("")
+    const [confirmarSenha, setConfirmarSenha] = useState<String>("")
     const [user, setUser] = useState<User>(
         {
             id: 0,
@@ -17,7 +17,7 @@ function CadastroUsuario() {
             usuario: '',
             senha: '',
             foto: '',
-            deficiencia:''
+            deficiencia: ''
         })
 
     const [userResult, setUserResult] = useState<User>(
@@ -27,18 +27,19 @@ function CadastroUsuario() {
             usuario: '',
             senha: '',
             foto: '',
-            deficiencia: ''            
+            deficiencia: ''
         })
 
     useEffect(() => {
         if (userResult.id != 0) {
-            navigate("/login")            
+            navigate("/login")
         }
     }, [userResult])
 
 
-    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>){
-        setConfirmarSenha(e.target.value)    }
+    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>) {
+        setConfirmarSenha(e.target.value)
+    }
 
 
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
@@ -51,30 +52,35 @@ function CadastroUsuario() {
     }
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        if(confirmarSenha === user.senha && user.senha.length >= 2){
-        cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-        alert('Usuario cadastrado com sucesso')
-        }else{
+        if (confirmarSenha === user.senha && user.senha.length >= 8) {
+            cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
+            alert('Usuario cadastrado com sucesso')
+        } else {
             alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
         }
     }
 
     return (
-        <Grid container direction = 'row' justifyContent='center' alignItems='center'>
+        <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid item xs={6} className='imagem2'></Grid>
             <Grid item xs={6} alignItems='center'>
 
                 <Box paddingX={10}>
-                <form onSubmit={onSubmit}>
+                    <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
 
-                        <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id='nome' label='nome' variant='outlined' name='nome' margin='normal' fullWidth />
+                        <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='nome' variant='outlined' name='nome' margin='normal' required fullWidth />
 
-                        <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal' required placeholder = 'Digite um e-mail válido' fullWidth />
+                        <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuario' placeholder='Digite um e-mail válido' variant='outlined' name='usuario' margin='normal' required fullWidth />
 
-                        <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+                        <TextField value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' label='foto' placeholder='Insira a URL da sua foto' variant='outlined' name='foto' margin='normal' fullWidth />
 
-                        <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='confirmarSenha' variant='outlined' name='confirmarSenha' margin='normal' type='password'fullWidth />
+                        <TextField value={user.deficiencia} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='deficiencia' label='deficiencia' placeholder='Insira qual deficiência você possui' variant='outlined' name='deficiencia' margin='normal' fullWidth />
+
+                        <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' placeholder='Digite sua senha' variant='outlined' name='senha' margin='normal' required type='password' fullWidth />
+
+                        <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='confirmarSenha' placeholder='Confirme sua senha' variant='outlined' name='confirmarSenha' margin='normal' required type='password' fullWidth />
+
                         <Box marginTop={2} textAlign='center'>
 
                             <Link to='/login' className='text-decorator-none'>
@@ -89,8 +95,8 @@ function CadastroUsuario() {
                         </Box>
                     </form>
                 </Box>
-            </Grid>  
-            
+            </Grid>
+
         </Grid>
     );
 }

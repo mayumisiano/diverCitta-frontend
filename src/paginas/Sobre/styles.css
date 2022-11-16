@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 30px;
+    padding: 0 10px;
   }
   
   .card--container {
@@ -32,36 +32,37 @@
   }
   
   .card-img img {
-    width: 100px;
+    width: 110px;
     border-radius: 50%;
   }
   
   .card-title {
     line-height: 7px;
-    font-size: 10px;
+    font-size: 15px;
     width: 100%;
     text-align: center;
     margin: 0.5rem 0 0.2rem 0;
   }
   
   .card-title h4 {
-    color: #565656;
+    color: #565656;    
   }
   
   .card-title p {
     color: #7d8285;
     text-align: center;
+    font-size: 14px;
   }
   
   .card-info {
-    padding: 0 5px;
+    padding: 0 0px;
     text-align: center;
     color: #7d8285;
-    font-size: 10px;
+    font-size: 12px;
   }
   
   .card-info > p {
-    text-align: center;
+    text-align: left;
   }
   
   .card-social {

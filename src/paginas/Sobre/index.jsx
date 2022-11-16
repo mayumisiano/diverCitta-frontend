@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+
 function CardTeam() {
   return (    
     <div className="card--content row container">
@@ -9,7 +10,7 @@ function CardTeam() {
         </div>
         <div className="card-title">
           <h4>Cristaly Medeiros</h4>
-          <p>Desenvolvedora de software</p>
+          <p>Software Developer</p>
         </div>
         <div className="card-info">
           <p>
@@ -46,7 +47,7 @@ function CardTeam() {
         </div>
         <div className="card-title">
           <h4>Eliane Silva</h4>
-          <p>Desenvolvedora de software</p>
+          <p>Software Developer</p>
         </div>
         <div className="card-info">
           <p>
@@ -72,7 +73,7 @@ function CardTeam() {
         </div>
         <div className="card-title">
           <h4>Juliana Nonaka</h4>
-          <p>Desenvolvedora de software</p>
+          <p>Software Developer</p>
         </div>
         <div className="card-info">
           <p>
@@ -102,7 +103,7 @@ function CardTeam() {
         </div>
         <div className="card-title">
           <h4>Leticia Santos</h4>
-          <p>Desenvolvedora de software</p>
+          <p>Software Developer</p>
         </div>
         <div className="card-info">
           <p>
@@ -139,7 +140,7 @@ function CardTeam() {
         </div>
         <div className="card-title">
           <h4>Leticia Moneda</h4>
-          <p>Desenvolvedora de software</p>
+          <p>Software Developer</p>
         </div>
         <div className="card-info">
           <p>
@@ -176,7 +177,7 @@ function CardTeam() {
         </div>
         <div className="card-title">
           <h4>Lucy Suxo</h4>
-          <p>Desenvolvedora de software</p>
+          <p>Software Developer</p>
         </div>
         <div className="card-info">
           <p>
@@ -214,7 +215,7 @@ function CardTeam() {
         </div>
         <div className="card-title">
           <h4>Paula Mayumi</h4>
-          <p>Desenvolvedora de software</p>
+          <p>Software Developer</p>
         </div>
         <div className="card-info">
           <p>

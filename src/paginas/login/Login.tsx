@@ -8,12 +8,13 @@ import { useDispatch } from 'react-redux';
 import { addToken } from '../../Store/Tokens/actions';
 import { toast } from 'react-toastify';
 import { login } from '../../Services/Service';
+import useLocalStorage from 'react-use-localstorage';
 import './Login.css';
 
 function Login() {
     let history = useNavigate();
     const dispatch = useDispatch();
-    const [token, setToken] = useState('');
+    const [token, setToken] = useState('');   
     const[userLogin, setUserLogin] = useState<UserLogin>(
       {
         id: 0,
@@ -40,31 +41,31 @@ function Login() {
 
       async function onSubmit(e: ChangeEvent<HTMLFormElement>){
         e.preventDefault();
-          try{await login(`/usuarios/logar`, userLogin, setToken)
-          toast.success('Usuario logado com sucesso', {
-              position: "top-right",
-              autoClose: 2000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: false,
-              draggable: false,
-              theme: "colored",
-              progress: undefined,
-          });
-          } catch(error){
-            toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
-              position: "top-right",
-              autoClose: 2000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: false,
-              draggable: false,
-              theme: "colored",
-              progress: undefined,
-          });
+          try{
+            await login(`/usuarios/logar`, userLogin, setToken)
+            toast.success('Usuario logado com sucesso', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+            } catch(error){
+              toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });       
           }
-
-          }
+        }
 
 
   return (
@@ -127,9 +128,6 @@ function Login() {
   );
   }
 
-
-export default Login;
-
 //Linha 7: Onde aparecerá todos os conteúdos na tela
 //Linha 8: É o container
 //Linha 9: Item do Grid container, vai ficar o formulário (texto,long,senha,botão)
@@ -139,3 +137,5 @@ export default Login;
 //Linha 22: Textfield > entrada de texto (usuario)
 //Linha 30: Textfield > entrada de texto(senha)
 //Linha 40: Link que inclui a rota
+
+export default Login;

@@ -8,11 +8,9 @@ import { toast } from 'react-toastify';
 import './CadastroUsuario.css';
 
 function CadastroUsuario() {
+
   let navigate = useNavigate();
-
-
   const [confirmarSenha, setConfirmarSenha] = useState<String>('');
-
   const [user, setUser] = useState<User>({
     id: 0,
     nome: '',
@@ -141,7 +139,7 @@ function CadastroUsuario() {
                 <Button
                   variant="contained"
                   color="secondary"
-                  className="btnCancelar">
+                  className="btnCancelar">               
                   Cancelar
                 </Button>
               </Link>

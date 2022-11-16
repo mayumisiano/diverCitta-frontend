@@ -3,8 +3,8 @@ interface UserLogin
     id: number;
     nome: string;
     usuario: string;
-    foto: string;
     senha: string;
+    foto: string;
     token?: string | null;
 }
 

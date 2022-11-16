@@ -1,15 +1,15 @@
-import React, { useState, useEffect, ChangeEvent } from 'react'
-import User from '../../model/User'
-import { cadastroUsuario } from '../../services/Service'
-import { Grid, Typography, Button, TextField } from '@material-ui/core'
-import { Box } from '@mui/material'
-import { Link, useNavigate } from 'react-router-dom'
-import './CadastrarUsuario.css'
+import React, { useState, useEffect, ChangeEvent } from 'react';
+import User from '../../model/User';
+import { cadastroUsuario } from '../../services/Service';
+import { Grid, Typography, Button, TextField } from '@material-ui/core';
+import { Box } from '@mui/material';
+import { Link, useNavigate } from 'react-router-dom';
+import './CadastroUsuario.css';
 
 function CadastroUsuario() {
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
-  const [confirmarSenha, setConfirmarSenha] = useState<String>('')
+  const [confirmarSenha, setConfirmarSenha] = useState<String>('');
 
   const [user, setUser] = useState<User>({
     id: 0,
@@ -17,8 +17,8 @@ function CadastroUsuario() {
     usuario: '',
     senha: '',
     foto: '',
-    deficiencia: ''
-  })
+    deficiencia: '',
+  });
 
   const [userResult, setUserResult] = useState<User>({
     id: 0,
@@ -26,37 +26,35 @@ function CadastroUsuario() {
     usuario: '',
     senha: '',
     foto: '',
-    deficiencia: ''
-  })
+    deficiencia: '',
+  });
 
   useEffect(() => {
     if (userResult.id != 0) {
-      navigate('/login')
+      navigate('/login');
     }
-  }, [userResult])
+  }, [userResult]);
 
   function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>) {
-    setConfirmarSenha(e.target.value)
+    setConfirmarSenha(e.target.value);
   }
 
   function updatedModel(e: ChangeEvent<HTMLInputElement>) {
     setUser({
       ...user,
-      [e.target.name]: e.target.value
-    })
+      [e.target.name]: e.target.value,
+    });
   }
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-    e.preventDefault()
+    e.preventDefault();
     if (confirmarSenha == user.senha && user.senha.length >= 8) {
-     
-     try{
-       await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-       alert('Usuario cadastrado com sucesso')       
-      } catch{
-        alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
-      }
-      
+      cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
+      alert('Usuario cadastrado com sucesso');
+    } else {
+      alert(
+        'Dados inconsistentes. Favor verificar as informações de cadastro.'
+      );
     }
   }
 
@@ -93,26 +91,6 @@ function CadastroUsuario() {
               label="usuario"
               variant="outlined"
               name="usuario"
-              margin="normal"
-              fullWidth
-            />
-            <TextField
-              value={user.foto}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="foto"
-              label="Url da foto"
-              variant="outlined"
-              name="foto"
-              margin="normal"
-              fullWidth
-            />
-            <TextField
-              value={user.deficiencia}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="deficiencia"
-              label="Tipo de deficiência"
-              variant="outlined"
-              name="deficiencia"
               margin="normal"
               fullWidth
             />
@@ -158,7 +136,7 @@ function CadastroUsuario() {
         </Box>
       </Grid>
     </Grid>
-  )
+  );
 }
 
-export default CadastroUsuario
+export default CadastroUsuario;

@@ -8,9 +8,7 @@ import './CadastroUsuario.css';
 
 function CadastroUsuario() {
   let navigate = useNavigate();
-
   const [confirmarSenha, setConfirmarSenha] = useState<String>('');
-
   const [user, setUser] = useState<User>({
     id: 0,
     nome: '',
@@ -140,3 +138,4 @@ function CadastroUsuario() {
 }
 
 export default CadastroUsuario;
+

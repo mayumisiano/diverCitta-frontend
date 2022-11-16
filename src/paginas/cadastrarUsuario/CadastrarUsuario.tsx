@@ -4,13 +4,13 @@ import { cadastroUsuario } from '../../services/Service';
 import { Grid, Typography, Button, TextField } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import './CadastroUsuario.css';
 
 function CadastroUsuario() {
+
   let navigate = useNavigate();
-
   const [confirmarSenha, setConfirmarSenha] = useState<String>('');
-
   const [user, setUser] = useState<User>({
     id: 0,
     nome: '',
@@ -49,14 +49,30 @@ function CadastroUsuario() {
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
     if (confirmarSenha == user.senha && user.senha.length >= 8) {
-      cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
-      alert('Usuario cadastrado com sucesso');
-    } else {
-      alert(
-        'Dados inconsistentes. Favor verificar as informações de cadastro.'
-      );
+      cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)        
+        toast.success('Usuario cadastrado com sucesso', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
+        }else{            
+            toast.error('Dados inconsistentes. Favor verificar as informações de cadastro.', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+        }
     }
-  }
 
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center">
@@ -123,8 +139,7 @@ function CadastroUsuario() {
                 <Button
                   variant="contained"
                   color="secondary"
-                  className="btnCancelar"
-                >
+                  className="btnCancelar">               
                   Cancelar
                 </Button>
               </Link>

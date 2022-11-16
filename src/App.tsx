@@ -35,8 +35,10 @@ function App() {
 						<Route path="/login" element={<Login />} />
 
 						<Route path="/temas" element={<ListaTema />} />
-
-						<Route path="/posts" element={<ListaPostagem />} />
+            
+            <Route path="/cadastrousuario" element={<CadastroUsuario />} />            
+            
+            <Route path="/posts" element={<ListaPostagem />} />
 
 						<Route path="/formularioPostagem" element={<CadastroPost />} />
 

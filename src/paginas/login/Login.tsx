@@ -1,15 +1,95 @@
-import React from 'react';
-import './Login.css';
+import React, { useState, ChangeEvent, useEffect } from 'react';
 import { Grid, Typography, TextField, Button } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
+import UserLogin from '../../model/UserLogin';
 import { Box } from '@mui/material';
+import './Login.css';
+import { login } from '../../services/Service';
 
 function Login() {
+	let history = useNavigate();
+	const [token, setToken] = useLocalStorage('token');
+	const [userLogin, setUserLogin] = useState<UserLogin>(
+		{
+			id: 0,
+			nome: '',
+			usuario: '',
+			senha: '',
+			foto: '',
+			token: ''
+		}
+	)
+
+	function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+		setUserLogin({
+			...userLogin,
+			[e.target.name]: e.target.value
+		})
+	}
+
+	useEffect(() => {
+		if (token != '') {
+			history('/home')
+		}
+	}, [token])
+
+	async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+		e.preventDefault();
+		try {
+			await login(`/usuarios/logar`, userLogin, setToken)
+=======
+import { api } from '../../services/Service';
+import UserLogin from '../../model/UserLogin';
+import { Box } from '@mui/material';
+import './Login.css';
+
+function Login() {
+    let history = useNavigate();
+    const [token, setToken] = useLocalStorage('token');
+    const[userLogin, setUserLogin] = useState<UserLogin>(
+      {
+        id: 0,
+        nome: '',
+        usuario:'',
+        senha: '',
+        foto: '',
+        token: ''
+      }
+      )
+
+      function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+        setUserLogin({
+          ...userLogin,
+          [e.target.name]: e.target.value
+        })
+      }
+
+      useEffect(()=>{
+        if( token != ''){
+          history('/home')
+        }
+      }, [token])
+
+      async function onSubmit(e: ChangeEvent<HTMLFormElement>){
+        e.preventDefault();
+          try{
+              const resposta = await api.post(`/usuarios/logar`, userLogin)
+              setToken (resposta.data.token)
+
+              alert('Usuário logado com sucesso!');
+          } catch(error){
+              alert('Dados do usuário inconsistentes. Erro ao logar!');
+          }
+
+          }
+
+
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center">
       <Grid alignItems="center" xs={6}>
         <Box paddingX={20}>
-          <form>
+          <form onSubmit={onSubmit}>
             <Typography
               variant="h3"
               gutterBottom
@@ -20,7 +100,7 @@ function Login() {
             >
               Entrar
             </Typography>
-            <TextField
+            <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="usuario"
               label="usuário"
               variant="outlined"
@@ -28,7 +108,7 @@ function Login() {
               margin="normal"
               fullWidth
             />
-            <TextField
+            <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="senha"
               label="senha"
               variant="outlined"
@@ -38,11 +118,9 @@ function Login() {
               fullWidth
             />
             <Box marginTop={2} textAlign="center">
-              <Link to="/home" className="text-decorator-none">
                 <Button type="submit" variant="contained" color="primary">
                   Logar
                 </Button>
-              </Link>
             </Box>
           </form>
           <Box display="flex" justifyContent="center" marginTop={2}>
@@ -65,16 +143,81 @@ function Login() {
       <Grid xs={6} className="imagem"></Grid>
     </Grid>
   );
+  }
+
+			alert('Usuário logado com sucesso!');
+		} catch (error) {
+			alert('Dados do usuário inconsistentes. Erro ao logar!');
+		}
+
+	}
+
+	return (
+		<Grid container direction="row" justifyContent="center" alignItems="center">
+			<Grid alignItems="center" xs={6}>
+				<Box paddingX={20}>
+					<form onSubmit={onSubmit}>
+						<Typography
+							variant="h3"
+							gutterBottom
+							color="textPrimary"
+							component="h3"
+							align="center"
+							className="textos1"
+						>
+							Entrar
+						</Typography>
+						<TextField
+							value={userLogin.usuario}
+							onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+							id="usuario"
+							label="usuário"
+							variant="outlined"
+							name="usuario"
+							margin="normal"
+							fullWidth
+						/>
+						<TextField
+							value={userLogin.senha}
+							onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+							id="senha"
+							label="senha"
+							variant="outlined"
+							name="senha"
+							margin="normal"
+							type="password"
+							fullWidth
+						/>
+						<Box marginTop={2} textAlign="center">
+
+							<Button type="submit" variant="contained" color="primary">
+								Logar
+							</Button>
+
+						</Box>
+					</form>
+					<Box display="flex" justifyContent="center" marginTop={2}>
+						<Box marginRight={1}>
+							<Typography variant="subtitle1" gutterBottom align="center">
+								Não tem uma conta?
+							</Typography>
+						</Box>
+						<Link to='/cadastrousuario'>
+							<Typography
+								variant="subtitle1"
+								gutterBottom
+								align="center"
+								className="textos1"
+							>
+								Cadastre-se
+							</Typography>
+						</Link>
+					</Box>
+				</Box>
+			</Grid>
+			<Grid xs={6} className="imagem"></Grid>
+		</Grid>
+	)
 }
 
 export default Login;
-
-//Linha 7: Onde aparecerá todos os conteúdos na tela
-//Linha 8: É o container
-//Linha 9: Item do Grid container, vai ficar o formulário (texto,long,senha,botão)
-//Linha 64: Items do Grid container, vai ficar a imagem(imagem e campos)
-//Linha 11: Criação do Formulário
-//Linha 12: Typography > onde serão colocados os textos (entrar)
-//Linha 22: Textfield > entrada de texto (usuario)
-//Linha 30: Textfield > entrada de texto(senha)
-//Linha 40: Link que inclui a rota

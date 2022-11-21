@@ -73,33 +73,32 @@ function DeletarPostagem() {
 
 	return (
 		<>
-			<Box m={2}>
-				<Card variant="outlined" >
+			<Box  m={20}>
+				<Card  variant="outlined" >
+
 					<CardContent>
-						<Box justifyContent="center">
+
+						<Box className= 'form1' justifyContent="center">
 							<Typography color="textSecondary" gutterBottom>
 								Deseja deletar a Postagem:
 							</Typography>
 							<Typography color="textSecondary" >
 								{post?.titulo}
 							</Typography>
-						</Box>
-
-					</CardContent>
-					<CardActions>
-						<Box display="flex" justifyContent="start" ml={1.0} mb={2} >
-							<Box mx={2}>
-								<Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+							<Box className='alinhar' display="flex" justifyContent="start" ml={1.0} mb={2} >
+								<Box mx={2}>
+									<Button className='botao' onClick={sim} variant="contained" size='large'>
 									Sim
-								</Button>
+									</Button>
 							</Box>
-							<Box>
-								<Button onClick={nao} variant="contained" size='large' color="secondary">
+								<Box>
+									<Button className='botao' onClick={nao} variant="contained" size='large'>
 									Não
-								</Button>
+									</Button>
+								</Box>
 							</Box>
 						</Box>
-					</CardActions>
+					</CardContent>
 				</Card>
 			</Box>
 		</>

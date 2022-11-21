@@ -1,1 +1,33 @@
-/*estilização a ser definida*/
+.topo {
+	margin-top: 20px;
+}
+
+.form1 {
+	border-radius: 17px;
+	border: none!important;
+	box-shadow: 2px 2px 1px 1px #615e5e;
+	text-align: center;
+	background-color: #cb9de1;
+	color: #3f1158 !important;
+ 
+
+}
+
+.back1 {
+	background-color: #cb91e7 !important;
+
+	width: 100%;
+	min-height: 100vh;
+	background-size: cover;
+    justify-content: center;
+}
+
+.botao{
+    background-color:  #3f1158 !important;
+    color:#f3e7f5!important;
+    font-weight: "bold";
+}
+
+.alinhar {
+    justify-content: center !important;
+}

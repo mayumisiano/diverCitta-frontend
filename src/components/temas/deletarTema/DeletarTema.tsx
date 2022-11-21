@@ -77,23 +77,23 @@ function DeletarTema() {
 
     return (
         <>
-            <Box m={2}>
+            <Box m={20}>
                 <Card variant="outlined">
                     <CardContent>
-                        <Box justifyContent="center">
+                        <Box className= 'form1' justifyContent="center">
                             <Typography color="textSecondary" gutterBottom>Deseja excluir o tema?</Typography>
                             <Typography color="textSecondary">{tema?.descricao}</Typography>
                         </Box>
                     </CardContent>
                     <CardActions>
-                        <Box display="flex" justifyContent="start" ml={1.0} mb={2}>
+                        <Box className='alinhar' display="flex" justifyContent="start" ml={1.0} mb={2}>
                             <Box mx={2}>
-                                <Button onClick={sim} variant="contained" className="marginLeft btnAtualizar" size="large">
+                                <Button className= 'botao' onClick={sim} variant="contained"  size="large">
                                     Sim
                                 </Button>
                             </Box>
                             <Box mx={2}>
-                                <Button onClick={nao} variant="contained" size="large" color="secondary">
+                                <Button className= 'botao' onClick={nao} variant="contained" size="large" color="secondary">
                                     Não
                                 </Button>
                             </Box>

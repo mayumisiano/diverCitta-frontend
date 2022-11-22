@@ -1,5 +1,5 @@
 .topo {
-	margin-top: 20px;
+	margin-top: 30px;
 }
 
 .form1 {
@@ -9,26 +9,26 @@
 	text-align: center;
 	background-color: #cb9de1;
 	color: #3f1158 !important;
- 
-
-}
-
-.back1 {
-	background-color: #cb91e7 !important;
-
-	width: 100%;
-	min-height: 100vh;
-	background-size: cover;
-    justify-content: center;
+    margin: 0; 
 }
 
 .botao{
     background-color:  #3f1158 !important;
     color:#f3e7f5!important;
     font-weight: "bold";
+    width: 30px ;
+    height: 30px;
 }
 
 .alinhar {
     justify-content: center !important;
+   
 }
 
+.back2{
+	padding: 110px;
+}
+
+.botoes{
+    color: rgb(9, 0, 12);
+}

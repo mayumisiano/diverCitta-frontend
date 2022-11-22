@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 import Postagem from '../../../model/Postagem';
+import Container from '@mui/material/Container';
 
 function DeletarPostagem() {
 
@@ -73,16 +74,12 @@ function DeletarPostagem() {
 
 	return (
 		<>
-			<Box  m={20}>
-				<Card  variant="outlined" >
-
-					<CardContent>
-
+	<Container className='back2' >			
 						<Box className= 'form1' justifyContent="center">
-							<Typography color="textSecondary" gutterBottom>
-								Deseja deletar a Postagem:
+							<Typography className='botoes' color="textSecondary" gutterBottom>
+								     Deseja deletar a Postagem:    
 							</Typography>
-							<Typography color="textSecondary" >
+							<Typography className='botoes' color="textSecondary" >
 								{post?.titulo}
 							</Typography>
 							<Box className='alinhar' display="flex" justifyContent="start" ml={1.0} mb={2} >
@@ -97,10 +94,8 @@ function DeletarPostagem() {
 									</Button>
 								</Box>
 							</Box>
-						</Box>
-					</CardContent>
-				</Card>
-			</Box>
+						</Box>			
+			</Container>
 		</>
 	);
 }

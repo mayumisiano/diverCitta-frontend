@@ -19,6 +19,11 @@
     
 }
 
+.cursor:hover
+{
+    color: #cce489 !important;
+}
+
 /* .logotipo{
     font-family: "Baron Neue Black" !important;    
     color: white;   

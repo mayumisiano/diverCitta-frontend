@@ -2,6 +2,44 @@
     text-decoration: none;
 }
 
+/*CSS BACK e cards*/
+.backTema {
+	background-color: #E4AFFF !important;
+	background-image: url(https://static.vecteezy.com/system/resources/previews/003/588/032/original/pastel-ombre-background-in-pink-and-purple-vector.jpg);
+	background-repeat: no-repeat;
+  display: flex;
+  align-self: center;
+  justify-content: space-evenly;
+  width: auto;
+	min-height: 100vh;	
+}
+
+.listaTemas
+{
+  border-radius: 13px !important;
+  color: #423d3d !important;
+  display: flex;
+  flex-flow: row wrap;
+  word-wrap: break-word;
+  align-self: auto;
+  justify-content: center;
+  
+  box-shadow: 1px 3px 7px 1px #615865;
+}
+
+.cardTemas
+{
+  background-color: #f8f1a3 !important;
+  color: #2d2b2b !important;
+  background: linear-gradient(to bottom,  #dba3f7  0%,#f0e352  43%,#ebdf59 51%,#9971ae 100%);
+  border-radius: 13px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /*CSS do Loader*/
 
 .loader-content {

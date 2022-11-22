@@ -14,16 +14,16 @@
 {
   background-color: #3f1158 !important;
   width: 128%;
-  color: #b9eb90 !important;
+  color: #d0e7be !important;
   font-size: 17px !important;
   letter-spacing: 2px !important;
 }
 
 .botaoD
 {
-  background-color: #E4AFFF !important; 
+  background-color: #713691!important; 
   
-  color: #a13e3e !important;
+  color: #d0e7be!important;
   font-size: 17px !important;
   letter-spacing: 2px !important;
 }
@@ -47,8 +47,6 @@
   border-radius: 50%;
   box-sizing: border-box;
   animation: animloader 1s ease-in infinite;
-  
-
 }
 
 @keyframes animloader {
@@ -66,8 +64,8 @@
 /*CSS Cards*/
 .postagens {
   width: 20vw;
-  color: #2d2b2b !important;
   background-color: #f8f1a3 !important;
+  background: linear-gradient(to bottom, #dba3f7  0%,#f0e352  43%,#ebdf59 51%,#9971ae 100%);
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -79,21 +77,32 @@
   box-shadow: 1px 3px 7px 1px #615865;
 }
 
+
 .corCard
 {
   background-color: #f8f1a3 !important;
+  color: #2d2b2b !important;
+  background: linear-gradient(to bottom,  #dba3f7  0%,#f0e352  43%,#ebdf59 51%,#9971ae 100%);
+  word-wrap: break-word;
   border: none !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*background*/
 
 .backPost {
-  background-color: #bfafc7 !important;
-  
+  background-color: #ddb0d5 !important;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/003/588/032/original/pastel-ombre-background-in-pink-and-purple-vector.jpg);
+	background-size: auto;
   background-position: center;
+  display: flex;
+  align-self: center;
+  justify-content: center;
   width: auto;
-  height: 50%;
-  background-size: cover;
+  height: auto;
 }
 
 

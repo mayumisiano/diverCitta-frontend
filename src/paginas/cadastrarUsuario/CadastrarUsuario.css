@@ -39,8 +39,8 @@
 .btnCancelar {
   margin-right: 20px !important;
   letter-spacing: 1px !important;
-  color: #a13e3e !important;
-  background-color: #E4AFFF !important;
+  color: #3f1158 !important;
+  background-color: #a274b9 !important;
   width: 128%;
 }
 
@@ -67,18 +67,18 @@
   border-radius: 9px;
   padding: 17px;
   margin: 7px;
-  box-shadow: 0 3px 30px #E4AFFF;
+  box-shadow: 0 3px 5px #E4AFFF;
   backdrop-filter: blur(11.8px);
   -webkit-backdrop-filter: blur(11.8px);
   border: 1px solid rgba(255, 255, 255, 0.51);
 }
 
-#foto {
+#foto, #texto, #titulo {
   background: #E4AFFF;
   border-radius: 9px;
   padding: 17px;
   margin: 7px;
-  box-shadow: 0 3px 30px #E4AFFF;
+  box-shadow: 0 3px 5px #E4AFFF;
   backdrop-filter: blur(11.8px);
   -webkit-backdrop-filter: blur(11.8px);
   border: 1px solid rgba(255, 255, 255, 0.51);
@@ -89,7 +89,7 @@
   border-radius: 9px;
   padding: 17px;
   margin: 7px;
-  box-shadow: 5px 3px 30px #E4AFFF;
+  box-shadow: 5px 3px 5px #E4AFFF;
   backdrop-filter: blur(11.8px);
   -webkit-backdrop-filter: blur(11.8px);
   border: 1px solid rgba(255, 255, 255, 0.51);
@@ -100,7 +100,7 @@
   border-radius: 9px;
   padding: 17px;
   margin: 7px;
-  box-shadow: 0 3px 30px #E4AFFF;
+  box-shadow: 0 3px 5px #E4AFFF;
   backdrop-filter: blur(11.8px);
   -webkit-backdrop-filter: blur(11.8px);
   border: 1px solid rgba(255, 255, 255, 0.51);

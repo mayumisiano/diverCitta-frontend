@@ -7,8 +7,16 @@
   border-radius: 9px;
   padding: 17px;
   margin: 7px;
-  box-shadow: 0 3px 30px #E4AFFF;
+  box-shadow: 0 3px 5px #E4AFFF;
   backdrop-filter: blur(11.8px);
   -webkit-backdrop-filter: blur(11.8px);
   border: 1px solid rgba(255, 255, 255, 0.51);
+}
+
+.backCadPost /*não está funcionando*/
+{
+  background-image: url(https://static.vecteezy.com/system/resources/previews/003/588/032/original/pastel-ombre-background-in-pink-and-purple-vector.jpg);
+	background-repeat: no-repeat;
+  background-position: 100%;
+	background-size: cover;
 }

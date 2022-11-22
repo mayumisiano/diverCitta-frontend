@@ -8,16 +8,22 @@
 	box-shadow: 3px 3px 5px 1px #615e5e;
 	padding: 40px;
 	background-color: #ba80d7;
+	background: linear-gradient(to bottom, #a573be 0%,#683a7e 43%,#622c7a 51%,#6d517c  100%);
 	color: #3f1158 !important;
-	margin: 200px 320px 100px 320px;
+	width: 35%;
+	margin: 0 auto;
+	
 }
 
 .back3 {
 	background-color: #E4AFFF !important;
-	background-image: url(https://i.imgur.com/VeaPFh7.png);
+	background-image: url(https://static.vecteezy.com/system/resources/previews/003/588/032/original/pastel-ombre-background-in-pink-and-purple-vector.jpg);
 	background-repeat: no-repeat;
 	width: 100%;
 	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-size: cover;
 }
 
@@ -26,7 +32,7 @@
 	border-radius: 9px;
 	padding: 17px;
 	margin: 7px;
-	box-shadow: 0 1px 7px #E4AFFF;
+	box-shadow: 0 1px 3px #E4AFFF;
 	backdrop-filter: blur(11.8px);
 	-webkit-backdrop-filter: blur(11.8px);
 	border: 1px solid rgba(255, 255, 255, 0.155);
@@ -43,7 +49,7 @@
 	background-color: #3f1158 !important;
 	width: 180px;
 	height: 38px;
-	color: #b9eb90 !important;
+	color: #d0e7be !important;
 	font-size: 18px !important;
 	letter-spacing: 2px !important;
 }

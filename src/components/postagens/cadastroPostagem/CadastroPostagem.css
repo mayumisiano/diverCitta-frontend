@@ -1,0 +1,19 @@
+.topo{
+  margin-top: 20px;
+  background-image: url(https://imgur.com/MVZb9vz.png);
+}
+
+#texto {
+  background: #45185c !important;
+  border-radius: 9px;
+  padding: 17px;
+  margin: 7px;
+  box-shadow: 0 3px 30px #E4AFFF;
+  backdrop-filter: blur(11.8px);
+  -webkit-backdrop-filter: blur(11.8px);
+  border: 1px solid rgba(255, 255, 255, 0.51);
+}
+.cad{
+  background-color: #641d8e !important;
+  color: rgb(7, 165, 15);
+}

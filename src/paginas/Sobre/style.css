@@ -1,0 +1,103 @@
+.card--content {	
+	background-image: url(https://static.vecteezy.com/system/resources/previews/003/588/032/original/pastel-ombre-background-in-pink-and-purple-vector.jpg);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	padding: 0 10px;
+}
+
+.card--container {
+	width: 17rem;
+	border: 1px solid #3F1158;
+	box-shadow: 2px 2px 6px #4b4b4b;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 15px;
+	flex-wrap: wrap;
+	border-radius: 10px;
+	transition: all ease-in-out 0.25s;
+	min-height: 380px;
+	margin: 0 10px 10px 0;
+}
+
+.card--container:hover {
+	transform: scale(1.03);
+	box-shadow: 10px 10px 12px -13px rgba(0, 0, 0, 0.75);
+	
+}
+
+.card-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-img img {
+	width: 110px;
+	border-radius: 50%;
+}
+
+.card-title {
+	line-height: 15px;
+	font-size: 18px;
+	width: 100%;
+	text-align: center;
+	margin: 0.5rem 0 0.2rem 0;
+}
+
+.card-title h4 {
+	color: #3c3c3c;
+}
+
+.card-title p {
+	color: #393939;
+	text-align: center;
+	font-size: 18px;
+	padding: 10px 2px;
+}
+
+.card-info {
+	padding: 0 1px;
+	text-align: center;
+	color: #222222;
+	font-size: 16px;
+}
+
+.card-info>p {
+	text-align: center;
+}
+
+.card-social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	gap: 15px;	
+}
+
+.card-social a {
+	padding-top: 25px;
+}
+
+.card-social img {
+	width: 35px;
+	height: 35px;
+}
+
+.span {
+	color: rgb(54, 54, 192);
+}
+
+.card-social>a>i {
+	font-size: 1.8rem;
+	color: #7d8285;
+}
+
+.card-social>a>i:hover {
+	color: #f58840;
+	transform: scale(1.2);
+	transition: all ease-in-out 0.1s;
+}

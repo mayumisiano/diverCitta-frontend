@@ -1,0 +1,88 @@
+.textos1 {
+  font-weight: bold !important;
+  padding-top: 20px;
+  font-size: 65px !important;
+  color: #3f1158 !important;
+}
+
+.text-decorator-none {
+  text-decoration: none;
+}
+
+.back {
+  background-color: #E4AFFF;
+  background-position: center;
+  background-image: url(https://i.imgur.com/lu4UkzJ.png);
+  background-repeat: no-repeat;
+  width: 200vw;
+  min-height: 100vh;
+  background-size: contain;
+}
+
+.form {
+  border-radius: 20px;
+  border: solid #E4AFFF;
+  box-shadow: 3px 3px 5px 3px #615e5e;
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  padding: 5px;
+  margin: 120px 120px 120px 200px;
+}
+
+.botao1 {
+  background-color: #3f1158 !important;
+  width: 250px;
+  height: 40px;
+  color: #E4AFFF !important;
+  font-size: 20px !important;
+  letter-spacing: 2px !important;
+}
+
+#usuario {
+  background: #E4AFFF;
+  border-radius: 9px;
+  padding: 17px;
+  margin: 7px;
+  box-shadow: 0 4px 30px #E4AFFF;
+  backdrop-filter: blur(11.8px);
+  -webkit-backdrop-filter: blur(11.8px);
+  border: 1px solid rgba(243, 243, 239, 0.51);
+}
+
+#senha {
+  background: #E4AFFF;
+  border-radius: 9px;
+  padding: 17px;
+  margin: 7px;
+  box-shadow: 0 3px 30px #E4AFFF;
+  backdrop-filter: blur(11.8px);
+  -webkit-backdrop-filter: blur(11.8px);
+  border: 1px solid rgba(255, 255, 255, 0.51);
+}
+
+.cadastrar
+{
+  font-size: 19px !important;
+}
+
+.font19
+{
+  font-size: 19px !important;
+}
+
+.cadastrar:hover
+{
+  color: #a13e3e;
+}
+
+label
+{
+  font-size: 19px !important;
+}
+
+/*
+#b9eb90;
+#3f1158 
+#E4AFFF;
+#FFF268
+*/

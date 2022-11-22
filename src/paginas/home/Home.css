@@ -1,0 +1,59 @@
+.caixa {
+    background-color: #b9eb90;
+    background-image: url(https://imgur.com/MVZb9vz.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.titulo {
+    color: #2bcb53 !important;
+    font-weight: bold;
+
+}
+
+.botao {
+    border-color: rgb(6, 9, 78);
+    background-color: #0a3c99 !important;
+    color: #ebf2e6 !important;
+    font-weight: "bold";
+}
+
+.postagens {
+    background-color: #210404 !important;
+}
+
+.loginPage {
+    width: 100vw;
+    min-height: calc(100vh-64px);
+}
+
+.espacobotao{
+    padding: 5%;
+
+}
+
+/* paleta de cores interessantes - acrescentem cores que curtam também :) 
+e depois verificamos se está nos padrões de acessibilidade
+
+#b9eb90;
+#3f1158 
+#E4AFFF;
+#FFF268
+
+#f9e1e0
+#ccb6b5
+#615a67
+#8a638b
+#ebb5de
+#df8cf3
+#582951
+#a13e3e
+#ac8975
+#855741
+#6e533e
+#f5ae90
+#f9c2aa
+#f0946e
+#ea7442
+#ffbd59
+*/

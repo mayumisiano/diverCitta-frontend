@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Grid, Toolbar, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
@@ -39,52 +39,62 @@ function Navbar() {
 		navbarComponent = (
 			<AppBar position="static" className="barra">
 				<Toolbar variant="dense" >
+
+					{/* <Typography variant="body2" component="p">
+						<img src={user.foto} alt="Imagem do Usuário" width="200px" height="200px" />
+					</Typography> */}		
+
+		
 					<Box>
-						<Typography variant="h5" color="inherit">
-							DiverCitta
+						<Link to='/home'>
+						<Typography className="logotipo">
+							<img src="https://i.imgur.com/52548Pp.png" alt="Logo Divercittà" />
 						</Typography>
+						</Link>
 					</Box>
-					
-					<Box display="flex" justifyContent="start">
-					<Link to="/home" className="text-decorator-none">
-						<Box mx={1} className="cursor">
-							<Typography variant="h6" color="inherit">
-								Home
-							</Typography>
+
+					<Grid  container direction="row" justifyContent="center" className="menu">
+						<Box display="flex" >
+							<Link to="/home" className="text-decorator-none">
+								<Box mx={1} className="cursor">
+									<Typography variant="h6" color="inherit">
+										Home
+									</Typography>
+								</Box>
+							</Link>
+							<Link to="/sobre-nos" className="text-decorator-none">
+								<Box mx={1} className="cursor">
+									<Typography variant="h6" color="inherit">
+										Sobre Nós
+									</Typography>
+								</Box>
+							</Link>
+
+							<Link to="/temas" className="text-decorator-none">
+								<Box mx={1} className="cursor">
+									<Typography variant="h6" color="inherit" noWrap>
+										Temas
+									</Typography>
+								</Box>
+							</Link>
+
+							<Link to="/formularioTema" className="text-decorator-none">
+								<Box mx={1} className="cursor">
+									<Typography variant="h6" color="inherit" noWrap>
+										Cadastrar tema
+									</Typography>
+								</Box>
+							</Link>
+
+							<Link to="/login" className="text-decorator-none">
+								<Box mx={1} className="cursor" onClick={goLogout}>
+									<Typography variant="h6" color="inherit">
+										Logout
+									</Typography>
+								</Box>
+							</Link>
 						</Box>
-						</Link>
-						<Link to="/sobre-nos" className="text-decorator-none">
-							<Box mx={1} className="cursor">
-								<Typography variant="h6" color="inherit">
-									Sobre Nós
-								</Typography>
-							</Box>
-						</Link>
-
-						<Link to="/temas" className="text-decorator-none">
-							<Box mx={1} className="cursor">
-								<Typography variant="h6" color="inherit" noWrap>
-									Temas
-								</Typography>
-							</Box>
-						</Link>
-
-						<Link to="/formularioTema" className="text-decorator-none">
-							<Box mx={1} className="cursor">
-								<Typography variant="h6" color="inherit" noWrap>
-									Cadastrar tema
-								</Typography>
-							</Box>
-						</Link>
-
-						<Link to="/login" className="text-decorator-none">
-							<Box mx={1} className="cursor" onClick={goLogout}>
-								<Typography variant="h6" color="inherit">
-									Logout
-								</Typography>
-							</Box>
-						</Link>
-					</Box>
+					</Grid>
 				</Toolbar>
 			</AppBar>
 		);

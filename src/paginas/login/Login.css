@@ -20,16 +20,14 @@
 }
 
 .form {
-
   border-radius: 20px;
   border: solid #E4AFFF;
-  box-shadow: 3px 3px 5px 3px #222222;
+  box-shadow: 3px 3px 5px 3px #615e5e;
   backdrop-filter: blur(4.3px);
   -webkit-backdrop-filter: blur(4.3px);
   padding: 5px;
   margin: 120px 120px 120px 200px;
 }
-
 
 .botao1 {
   background-color: #3f1158 !important;
@@ -43,40 +41,44 @@
 #usuario {
   background: #E4AFFF;
   border-radius: 9px;
-  padding: 20px;
+  padding: 17px;
   margin: 7px;
-  box-shadow: 0 4px 30px #E4AFFF;
+  box-shadow: 0 4px 5px #E4AFFF;
   backdrop-filter: blur(11.8px);
   -webkit-backdrop-filter: blur(11.8px);
   border: 1px solid rgba(255, 255, 255, 0.51);
 }
-
-
-/*.text-decorator-none .negrito
-{
-  font-weight: bold !important;
-}*/
-
-/*
-  background-color: #FFF268;
-  backdrop-filter: blur(4.3px);
-  -webkit-backdrop-filter: blur(4.3px);
-  padding: 20px;
-  margin: 7px;*/
 
 #senha {
   background: #E4AFFF;
   border-radius: 9px;
-  padding: 20px;
+  padding: 17px;
   margin: 7px;
-  box-shadow: 0 3px 30px #E4AFFF;
+  box-shadow: 0 3px 5px #E4AFFF;
   backdrop-filter: blur(11.8px);
   -webkit-backdrop-filter: blur(11.8px);
   border: 1px solid rgba(255, 255, 255, 0.51);
-
 }
 
+.cadastrar
+{
+  font-size: 19px !important;
+}
 
+.font19
+{
+  font-size: 19px !important;
+}
+
+.cadastrar:hover
+{
+  color: #a13e3e;
+}
+
+label
+{
+  font-size: 19px !important;
+}
 
 /*
 #b9eb90;

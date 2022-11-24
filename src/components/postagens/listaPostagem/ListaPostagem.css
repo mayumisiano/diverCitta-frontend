@@ -2,6 +2,32 @@
   text-decoration: none;
 }
 
+/*botoes*/
+
+.boxBotao
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+.botaoA
+{
+  background-color: #3f1158 !important;
+  width: 128%;
+  color: #d0e7be !important;
+  font-size: 17px !important;
+  letter-spacing: 2px !important;
+}
+
+.botaoD
+{
+  background-color: #713691!important; 
+  
+  color: #d0e7be!important;
+  font-size: 17px !important;
+  letter-spacing: 2px !important;
+}
+
   /*CSS do Loader*/
 
 .loader-content {
@@ -21,8 +47,6 @@
   border-radius: 50%;
   box-sizing: border-box;
   animation: animloader 1s ease-in infinite;
-  
-
 }
 
 @keyframes animloader {
@@ -39,9 +63,53 @@
 
 /*CSS Cards*/
 .postagens {
-  width: 25vw;
-  min-height: 232px;
-  padding: 0;
-  margin: 0;  
+  width: 20vw;
+  background-color: #f8f1a3 !important;
+  background: linear-gradient(to bottom,   #dba3f7 0%,#dfdcb5  40%, #dfda9e 57%, #9971ae 100%);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  min-height: 200px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 13px;
   word-wrap: break-word;
+  box-shadow: 1px 3px 7px 1px #615865;
 }
+
+
+.corCard
+{
+  background-color: #f8f1a3 !important;
+  color: #2d2b2b !important;
+  background: linear-gradient(to bottom,  #dba3f7 0%,#dfdcb5  40%, #dfda9e 57%, #9971ae 100%);
+  word-wrap: break-word;
+  border: none !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*background*/
+
+.backPost {
+  background-color: #ddb0d5 !important;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/003/588/032/original/pastel-ombre-background-in-pink-and-purple-vector.jpg);
+	background-size: auto;
+  background-position: center;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+
+
+
+/*cores da nossa paleta
+#b9eb90;
+#3f1158 
+#E4AFFF;
+#FFF268
+*/

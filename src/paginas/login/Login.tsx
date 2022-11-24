@@ -60,7 +60,7 @@ function Login() {
 		e.preventDefault();
 		try {
 			await login(`/usuarios/logar`, userLogin, setRespUserLogin)
-			toast.success('Usuario logado com sucesso', {
+			toast.success('Usuário logado com sucesso!', {
 				icon: "👋",
 				position: "top-right",
 				autoClose: 2000,
@@ -87,7 +87,7 @@ function Login() {
 
 
 	return (
-		<Grid className="back" container direction="row" justifyContent="center" alignItems="center">
+		<Grid container className="back" direction="row" justifyContent="center" alignItems="center">
 			<Grid alignItems="center" xs={6}>
 				<Box className="form" paddingX={9}>
 					<form  onSubmit={onSubmit}>
@@ -126,18 +126,17 @@ function Login() {
 					</form>
 					<Box display="flex" justifyContent="center" marginTop={2}>
 						<Box marginRight={1}>
-							<Typography variant="subtitle1" gutterBottom align="center">
+							<Typography className='font19' variant="subtitle1" gutterBottom align="center">
 								Não tem uma conta?
 							</Typography>
 						</Box>
-						<Link to="/cadastrousuario" className="text-decorator-none negrito">
+						<Link to="/cadastrousuario" className="text-decorator-none">
 							<Typography
 								variant="subtitle1"
 								gutterBottom
 								align="center"
-								
-							>
-								Cadastre-se
+								className='cadastrar'>
+								<b>Cadastre-se</b>
 							</Typography>
 						</Link>
 					</Box>

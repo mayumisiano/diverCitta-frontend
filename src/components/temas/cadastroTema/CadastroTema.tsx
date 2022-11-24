@@ -1,4 +1,4 @@
-import { Button, TextField, Typography } from '@mui/material';
+import { Box, Button, TextField, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { useSelector } from 'react-redux';
@@ -131,20 +131,25 @@ function CadastroTema() {
 	}
 
 	return (
-		<Container maxWidth="sm" className="topo">
-			<form onSubmit={onSubmit}>
-				<Typography variant="h3" color="textSecondary"
-					component="h1" align="center">
-					Cadastre um tema:
-				</Typography>
-				<TextField value={tema.descricao} onChange={(event: ChangeEvent<HTMLInputElement>) => updatedTema(event)}
-					id="descricao" label="descrição"
-					variant="outlined" name="descricao" margin="normal" fullWidth required/>
-				<Button type="submit" variant="contained" color="primary">
-					Finalizar
-				</Button>
-			</form>
-		</Container>
+		<div className="back3">
+			
+				<form className='form3' onSubmit={onSubmit}>
+					<Typography variant="h3"
+						component="h1" align="center">
+						{id === undefined ? <span>Cadastre</span> : <span>Atualize</span>} seu Tema:
+					</Typography>
+					<TextField value={tema.descricao} onChange={(event: ChangeEvent<HTMLInputElement>) => updatedTema(event)}
+						id="descricao" label="descrição" placeholder='Digite seu tema'
+						variant="outlined" name="descricao" margin="normal" fullWidth required />
+					<Box className="box3" marginTop={2} textAlign='center'>
+						<Button type="submit" variant="contained" className='botaoF'>
+							Finalizar
+						</Button>
+					</Box>
+				</form>
+			
+		</div>
+
 	)
 }
 

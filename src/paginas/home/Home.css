@@ -1,34 +1,46 @@
 .caixa
 {
-    background-color: #ccb6b5;
+    background-color: #b9eb90;
+    background-image: url(https://imgur.com/MVZb9vz.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 .titulo
 {
-    color:#855741 !important;
+    color:#2bcb53  !important;
     font-weight: bold;
 
 }
 
-.botao
+.botao2
 {
-    border-color: lightslategray;
-    background-color:  #ac8975 !important;
-    color:#6e533e!important;
+    border-color: rgb(239, 236, 240);
+    background-color: #74477d !important;
+    color: #ebf2e6 !important;
     font-weight: "bold";
 }
 
 .postagens
 {
-    background-color: #f9e1e0 !important;
+    background-color: #210404  !important;
 }
-
+.altura{
+    min-height: 58vh !important;
+}
 .loginPage
 {
     width: 100vw;
     min-height: calc(100vh-64px);
 }
+.espacoBotao{
+    padding: 5%;
+}
 
+.imagem{
+    width: 48vw;
+}
 /* paleta de cores interessantes - acrescentem cores que curtam também :) 
 e depois verificamos se está nos padrões de acessibilidade
 

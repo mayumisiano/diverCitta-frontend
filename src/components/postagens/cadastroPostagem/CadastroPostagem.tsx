@@ -8,6 +8,7 @@ import Tema from "../../../model/Tema";
 import User from "../../../model/User";
 import { busca, buscaId, put, post } from "../../../services/Service";
 import { TokenState } from "../../../store/tokens/tokensReducer";
+//importar css
 
 function CadastroPostagem() {
 
@@ -46,7 +47,8 @@ function CadastroPostagem() {
 		texto: '',
 		foto: '',
 		data: '',
-		tema: null
+		tema: null,
+		usuario: null
 	})
 
 	const userId = useSelector<TokenState, TokenState['id']>(
@@ -148,9 +150,9 @@ function CadastroPostagem() {
 	}
 
 	return (
-		<Container maxWidth="sm" className="topo">
+		<Container maxWidth="sm" className="backCadPost">
 			<form onSubmit={onSubmit} >
-				<Typography variant="h4" color="textSecondary" component="h1" align="center" >Formulário de cadastro postagem</Typography>
+				<Typography variant="h4" color="textSecondary" component="h1" align="center" >{id === undefined ? <span>Cadastre</span> : <span>Atualize</span>} sua postagem:</Typography>
 				<FormControl >
 					<InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
 					<Select
@@ -171,13 +173,13 @@ function CadastroPostagem() {
 
 				</FormControl>
 
-				<TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth required />
+				<TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="título" variant="outlined" name="titulo" placeholder="mínimo de 5 caracteres, máximo de 60" margin="normal" fullWidth required />
 
-				<TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="texto" name="texto" variant="outlined" margin="normal" fullWidth required />
+				<TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="texto" name="texto" variant="outlined" placeholder="mínimo de 10 caracteres, máximo de 1000" margin="normal" fullWidth required />
 
-				<TextField value={postagem.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="foto" label="foto" name="foto" variant="outlined" margin="normal" fullWidth required/>
+				<TextField value={postagem.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="foto" label="foto" name="foto" variant="outlined" placeholder='Insira a URL da sua foto' margin="normal" fullWidth required/>
 
-				<Button type='submit' variant='contained' color='primary'>
+				<Button type='submit' variant='contained'>
 					Finalizar
 				</Button>
 			</form>

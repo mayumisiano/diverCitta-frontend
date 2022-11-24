@@ -6,3 +6,11 @@
     border-color: white !important;
     background-color: white !important;
 }
+.botao2
+{
+    margin: 5px 0 5px 0;
+    border-color: rgb(239, 236, 240);
+    background-color: #74477d !important;
+    color: #ebf2e6 !important;
+    font-weight: "bold";
+}

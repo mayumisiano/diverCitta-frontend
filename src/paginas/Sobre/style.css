@@ -1,4 +1,21 @@
-.card--content {
+.intropagina #titulo{
+	color: rgb(68, 13, 67);
+	background-image: url(https://static.vecteezy.com/system/resources/previews/003/588/032/original/pastel-ombre-background-in-pink-and-purple-vector.jpg);
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom:30px
+}
+
+.intropagina #subtitulo{	
+	background-color: #340a4b;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	
+}
+
+.card--content {	
+	background-image: url(https://static.vecteezy.com/system/resources/previews/003/588/032/original/pastel-ombre-background-in-pink-and-purple-vector.jpg);
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -6,9 +23,10 @@
 	padding: 0 10px;
 }
 
-.card--container {
+.card--container {	
 	width: 17rem;
-	border: 1px solid #cfcfcf91;
+	border: 1px solid #9775a9;
+	box-shadow: 2px 2px 6px #4b4b4b;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -24,6 +42,7 @@
 .card--container:hover {
 	transform: scale(1.03);
 	box-shadow: 10px 10px 12px -13px rgba(0, 0, 0, 0.75);
+	
 }
 
 .card-img {
@@ -38,33 +57,33 @@
 }
 
 .card-title {
-	line-height: 7px;
-	font-size: 15px;
+	line-height: 15px;
+	font-size: 20px;
 	width: 100%;
 	text-align: center;
 	margin: 0.5rem 0 0.2rem 0;
 }
 
 .card-title h4 {
-	color: #565656;
+	color: #3c3c3c;
 }
 
 .card-title p {
-	color: #7d8285;
+	color: #393939;
 	text-align: center;
-	font-size: 14px;
+	font-size: 20px;
 	padding: 10px 2px;
 }
 
 .card-info {
-	padding: 0 2px;
+	padding: 0 1px;
 	text-align: center;
-	color: #7d8285;
-	font-size: 12px;
+	color: #222222;
+	font-size: 16px;
 }
 
 .card-info>p {
-	text-align: justify;
+	text-align: center;
 }
 
 .card-social {
@@ -72,7 +91,20 @@
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	gap: 15px;
+	gap: 15px;	
+}
+
+.card-social a {
+	padding-top: 25px;
+}
+
+.card-social img {
+	width: 35px;
+	height: 35px;
+}
+
+.span {
+	color: rgb(54, 54, 192);
 }
 
 .card-social>a>i {

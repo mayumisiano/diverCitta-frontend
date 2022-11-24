@@ -1,3 +1,55 @@
-.topo{
-    margin-top: 20px;
+.topo {
+	margin-top: 20px;
+}
+
+.form3 {
+	border-radius: 17px;
+	border: none!important;
+	box-shadow: 3px 3px 5px 1px #615e5e;
+	padding: 40px;
+	background-color: #ba80d7;
+	background: linear-gradient(to bottom, #a573be 0%,#683a7e 43%,#622c7a 51%,#6d517c  100%);
+	color: #3f1158 !important;
+	width: 35%;
+	margin: 0 auto;
+	
+}
+
+.back3 {
+	background-color: #E4AFFF !important;
+	background-image: url(https://static.vecteezy.com/system/resources/previews/003/588/032/original/pastel-ombre-background-in-pink-and-purple-vector.jpg);
+	background-repeat: no-repeat;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+}
+
+#descricao {
+	background: #E4AFFF;
+	border-radius: 9px;
+	padding: 17px;
+	margin: 7px;
+	box-shadow: 0 1px 3px #E4AFFF;
+	backdrop-filter: blur(11.8px);
+	-webkit-backdrop-filter: blur(11.8px);
+	border: 1px solid rgba(255, 255, 255, 0.155);
+}
+
+/*css botao*/
+.box3 {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 10px;
+}
+
+.botaoF {
+	background-color: #3f1158 !important;
+	width: 180px;
+	height: 38px;
+	color: #d0e7be !important;
+	font-size: 18px !important;
+	letter-spacing: 2px !important;
 }

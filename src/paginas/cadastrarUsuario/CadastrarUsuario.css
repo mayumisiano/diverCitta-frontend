@@ -1,16 +1,107 @@
-.imagem2 {
+/*.imagem2 {
   background-image: url(https://i.imgur.com/6QXA8rq.png);
   background-repeat: no-repeat;
   width: 100vh;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
-}
+}*/
 
 .textos2 {
   font-weight: bold !important;
+  color: #3f1158 !important;
+  padding-top: 10px;
 }
+
+.back2
+{
+  background-color: #E4AFFF;
+  background-position: center;
+  background-image: url(https://i.imgur.com/ShSqR20.png);
+  background-repeat: no-repeat;
+  width: 200vw;
+  min-height: 100vh;
+  background-size: contain;
+}
+
+.form2 {
+  border-radius: 20px;
+  border: solid #E4AFFF;
+  box-shadow: 3px 3px 5px 3px #615e5e;
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  padding: 5px;
+  margin: 100px 120px 120px 200px;
+}
+
+/*botoes*/
 
 .btnCancelar {
   margin-right: 20px !important;
+  letter-spacing: 1px !important;
+  color: #3f1158 !important;
+  background-color: #a274b9 !important;
+  width: 128%;
+}
+
+.botaoCad {
+  background-color: #3f1158 !important;
+  margin: 1px !important;
+  padding-bottom: 5px !important;
+  color: #E4AFFF !important;
+  font-size: 15px !important;
+  letter-spacing: 1px !important;
+  width: 48%;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 9px;
+}
+
+/*CSS DO BACKGROUND DOS CAMPOS FORM*/
+
+#nome {
+  background: #E4AFFF;
+  border-radius: 9px;
+  padding: 17px;
+  margin: 7px;
+  box-shadow: 0 3px 5px #E4AFFF;
+  backdrop-filter: blur(11.8px);
+  -webkit-backdrop-filter: blur(11.8px);
+  border: 1px solid rgba(255, 255, 255, 0.51);
+}
+
+#foto, #texto, #titulo {
+  background: #E4AFFF;
+  border-radius: 9px;
+  padding: 17px;
+  margin: 7px;
+  box-shadow: 0 3px 5px #E4AFFF;
+  backdrop-filter: blur(11.8px);
+  -webkit-backdrop-filter: blur(11.8px);
+  border: 1px solid rgba(255, 255, 255, 0.51);
+}
+
+#deficiencia {
+  background: #E4AFFF;
+  border-radius: 9px;
+  padding: 17px;
+  margin: 7px;
+  box-shadow: 5px 3px 5px #E4AFFF;
+  backdrop-filter: blur(11.8px);
+  -webkit-backdrop-filter: blur(11.8px);
+  border: 1px solid rgba(255, 255, 255, 0.51);
+}
+
+#confirmarSenha {
+  background: #E4AFFF;
+  border-radius: 9px;
+  padding: 17px;
+  margin: 7px;
+  box-shadow: 0 3px 5px #E4AFFF;
+  backdrop-filter: blur(11.8px);
+  -webkit-backdrop-filter: blur(11.8px);
+  border: 1px solid rgba(255, 255, 255, 0.51);
 }

@@ -1,19 +1,32 @@
 .topo{
-  margin-top: 20px;
-  background-image: url(https://imgur.com/MVZb9vz.png);
+  margin-top: 100px;
+  color: rgb(78, 22, 131) !important;
 }
 
 #texto {
-  background: #45185c !important;
-  border-radius: 9px;
-  padding: 17px;
+  background: #E4AFFF !important;
+  border-radius: 2px;
+  padding: 10px;
   margin: 7px;
-  box-shadow: 0 3px 30px #E4AFFF;
+  box-shadow: 5px 1px 2px #E4AFFF;
   backdrop-filter: blur(11.8px);
   -webkit-backdrop-filter: blur(11.8px);
-  border: 1px solid rgba(255, 255, 255, 0.51);
+  border: 1px solid rgba(237, 227, 227, 0.51);
 }
-.cad{
-  background-color: #641d8e !important;
-  color: rgb(7, 165, 15);
+
+.backCadPost 
+{
+  background-image: url(https://static.vecteezy.com/system/resources/previews/003/588/032/original/pastel-ombre-background-in-pink-and-purple-vector.jpg);
+	background-repeat: no-repeat;
+  background-position: 50%;
+	background-size: cover;
 }
+.botaoPost{
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-color: rgb(239, 236, 240);
+  background-color: #74477d !important;
+  color: #ebf2e6 !important;
+  font-weight: "bold";
+}
+

@@ -1,35 +1,53 @@
-.caixa {
+.caixa{
     background-color: #b9eb90;
     background-image: url(https://imgur.com/MVZb9vz.png);
     background-repeat: no-repeat;
     background-size: cover;
-   
+    height: 100vh;
 }
-.titulo {
+
+.titulo{
     color: #2bcb53 !important;
     font-weight: bold;
 
 }
 
-.botao {
-    border-color: rgb(6, 9, 78);
-    background-color: #0a3c99 !important;
+.botao2{
+    display: flex;
+    justify-content: space-between;
+    border-color: rgb(239, 236, 240);
+    background-color: #74477d !important;
     color: #ebf2e6 !important;
     font-weight: "bold";
+    width: 50%;
+    height: 60%;
 }
 
-.postagens {
+.postagens{
     background-color: #210404 !important;
 }
 
-.loginPage {
-    width: 100vw;
+.loginPage{
+    width: 500vw;
     min-height: calc(100vh-64px);
 }
+.espacoBotao{
+    padding: 10%;
+}
+.altura{
+    min-height: 10vh !important;
+}
+.imagem{
+    width: 50vw;
+}
+.titulo3{
+    color: #2b50cb !important;
+    font-weight: bold;
 
-.espacobotao{
-    padding: 5%;
-
+}
+.titulo2{
+    color: #8a1dcd !important;
+    font-weight: bold;
 }
 
 /* paleta de cores interessantes - acrescentem cores que curtam também :) 

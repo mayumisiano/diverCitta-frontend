@@ -43,10 +43,10 @@
   border-radius: 9px;
   padding: 17px;
   margin: 7px;
-  box-shadow: 0 4px 30px #E4AFFF;
+  box-shadow: 0 4px 5px #E4AFFF;
   backdrop-filter: blur(11.8px);
   -webkit-backdrop-filter: blur(11.8px);
-  border: 1px solid rgba(243, 243, 239, 0.51);
+  border: 1px solid rgba(255, 255, 255, 0.51);
 }
 
 #senha {
@@ -54,7 +54,7 @@
   border-radius: 9px;
   padding: 17px;
   margin: 7px;
-  box-shadow: 0 3px 30px #E4AFFF;
+  box-shadow: 0 3px 5px #E4AFFF;
   backdrop-filter: blur(11.8px);
   -webkit-backdrop-filter: blur(11.8px);
   border: 1px solid rgba(255, 255, 255, 0.51);

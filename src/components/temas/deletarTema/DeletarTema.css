@@ -1,1 +1,48 @@
-/*estilização a ser definida*/
+.topo {
+	margin-top: 30px;
+}
+
+.form1 {
+	border-radius: 17px;
+	border: none!important;
+	box-shadow: 2px 2px 1px 1px #615e5e;
+	text-align: center;
+	background-color: #cb9de1;
+	color: #3f1158 !important;
+    
+    
+}
+
+.backDel{
+    background-color: #E4AFFF !important;
+	background-image: url(https://static.vecteezy.com/system/resources/previews/003/588/032/original/pastel-ombre-background-in-pink-and-purple-vector.jpg);
+	background-repeat: no-repeat;
+	min-width: 60%;
+	min-height: 100vh;
+    margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	background-size: cover;   
+}
+
+.botao{
+    background-color:  #3f1158 !important;
+    color:#f3e7f5!important;
+    font-weight: "bold";
+    width: 30px ;
+    height: 30px;
+}
+
+.alinhar {
+    display: flex;
+    align-items: baseline;
+    justify-content: center !important;
+   
+}
+
+.botoes{
+    color: rgb(9, 0, 12);
+}
+
+/*background-image: url(https://i.imgur.com/ShSqR20.png);*/

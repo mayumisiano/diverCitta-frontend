@@ -36,10 +36,10 @@ const useStyles = makeStyles((theme: Theme) =>
 function ListaPostagem() {
 
 	const classes = useStyles();
-	const [expanded, setExpanded] = React.useState(false);
+	const [expanded, setExpanded] = React.useState(-1);
 
-	const handleExpandClick = () => {
-		setExpanded(!expanded);
+	const handleExpandClick = (i: any) => {
+		setExpanded(expanded === i ? -1 : i);
 	};
 
 
@@ -81,26 +81,24 @@ function ListaPostagem() {
 		<>
 			{postagem.length === 0 && <div className="loader-content"><span className="loader"></span></div>}
 
-
-
 			<Grid container className="backPost">
-				{postagem.map(postagem => (
+				{postagem.map((postagem, i) => (
 					<Box m={2} className="postagens" >
 						<Card className="{classes.root} corCard" variant="outlined">
 							<CardContent>
 								<Typography variant="h5" component="h2">
 									{postagem.titulo}
 								</Typography>
-								<Typography variant="body2" component="p">
+								<Typography variant="body1" component="p">
 									Postado em: {new Date(Date.parse(postagem.data)).toLocaleDateString()} <br />
 								</Typography>
-								<Typography variant="body1" component="p">
+								<Typography variant="subtitle1" component="p">
 									{postagem.tema?.descricao}
 								</Typography>
 								<Typography variant="body2" component="p" >
-									<img src={postagem.foto} width="200px" height="200px" />
+									<img src={postagem.foto} width="200px" height="190px" />
 								</Typography>
-								<Typography variant="body2" component="p">
+								<Typography variant="body1" component="p">
 									Postagem por: {postagem.usuario?.nome}
 								</Typography>
 							</CardContent>
@@ -109,14 +107,14 @@ function ListaPostagem() {
 									className={clsx(classes.expand, {
 										[classes.expandOpen]: expanded,
 									})}
-									onClick={handleExpandClick}
-									aria-expanded={expanded}
+									onClick={() => handleExpandClick(i)}
+									aria-expanded={expanded === i}
 									aria-label="show more"
 								>
 									<ExpandMoreIcon />
 								</IconButton>
 							</CardActions>
-							<Collapse in={expanded} timeout="auto" unmountOnExit>
+							<Collapse in={expanded === i} timeout="auto" unmountOnExit>
 								<CardContent>
 									<Typography variant="body1" component="p">
 										{postagem.texto}
@@ -127,7 +125,7 @@ function ListaPostagem() {
 								<Box display="flex" alignItems="center" mb={1.5}>
 									<Link to={`/formularioPostagem/${postagem.id}`} className="text-decorator-none" >
 										<Box mx={1} className="boxBotao">
-											<Button variant="contained" className=" botaoA" size='small'>
+											<Button variant="contained" className="botaoA" size='small'>
 												atualizar
 											</Button>
 										</Box>

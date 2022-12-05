@@ -20,10 +20,10 @@ const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		paper: {
 			position: 'absolute',
-			width: 400,
+			width: 500,
 			backgroundColor: theme.palette.background.paper,
 			border: '2px solid #000',
-			boxShadow: theme.shadows[5],
+			boxShadow: 'none',
 			padding: theme.spacing(2, 4, 3),
 		},
 	}),
@@ -56,16 +56,10 @@ function ModalPostagem() {
 
 	return (
 		<div>
-			<Button 
-				variant="outlined"
-				className="btnModal"
-				onClick={handleOpen}>Nova Postagem</Button>
+			<Button className="btnModal" onClick={handleOpen}>Nova Postagem</Button>
 			<Modal
-				open={open}
-				onClose={handleClose}
-				aria-labelledby="simple-modal-title"
-				aria-describedby="simple-modal-description"
-			>
+				open={open} onClose={handleClose} aria-labelledby="simple-modal-title"
+				aria-describedby="simple-modal-description">
 				{body}
 			</Modal>
 		</div>

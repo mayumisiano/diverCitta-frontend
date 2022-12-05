@@ -1,6 +1,6 @@
 import { Card, CardContent, Typography, CardActions, Button } from "@material-ui/core";
 import React, { ChangeEvent, useState, useEffect } from "react";
-import { Box } from "@mui/system";
+import { Box } from "@mui/material";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from "react-toastify";
@@ -8,6 +8,7 @@ import { buscaId, deleteId } from "../../../services/Service";
 import "./DeletarTema.css";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import Tema from "../../../model/Tema";
+import Container from '@mui/material/Container';
 
 function DeletarTema() {
 
@@ -77,32 +78,34 @@ function DeletarTema() {
 
     return (
         <>
-            <Box m={2}>
-                <Card variant="outlined">
-                    <CardContent>
-                        <Box justifyContent="center">
-                            <Typography color="textSecondary" gutterBottom>Deseja excluir o tema?</Typography>
-                            <Typography color="textSecondary">{tema?.descricao}</Typography>
-                        </Box>
-                    </CardContent>
-                    <CardActions>
-                        <Box display="flex" justifyContent="start" ml={1.0} mb={2}>
-                            <Box mx={2}>
-                                <Button onClick={sim} variant="contained" className="marginLeft btnAtualizar" size="large">
+        <div className='backDel'>
+        <Container  >
+                <Box className='form1' justifyContent="center">
+                    <Typography  variant="h5" gutterBottom>
+                        Deseja excluir o Tema:
+                    </Typography>
+                    <Box  display="flex" justifyContent="center"  mb={5} >
+                        <Box  display="flex" justifyContent="start" ml={1.5} mb={2}>
+                            <Box mx={2} className="boxBotao">
+                                <Button className='botaoA' onClick={sim} variant="contained" size='large'>
                                     Sim
                                 </Button>
                             </Box>
-                            <Box mx={2}>
-                                <Button onClick={nao} variant="contained" size="large" color="secondary">
+                            <Box>
+                                <Button className='botaoD' onClick={nao} variant="contained" size='large'>
                                     Não
                                 </Button>
                             </Box>
                         </Box>
-                    </CardActions>
-                </Card>
-            </Box>
+                    </Box>
+                </Box>
+            </Container>
+        </div>
+            
         </>
     );
 }
+
+
 
 export default DeletarTema;

@@ -8,6 +8,7 @@ import Tema from "../../../model/Tema";
 import User from "../../../model/User";
 import { busca, buscaId, put, post } from "../../../services/Service";
 import { TokenState } from "../../../store/tokens/tokensReducer";
+import './CadastroPostagem.css';
 
 function CadastroPostagem() {
 
@@ -149,9 +150,9 @@ function CadastroPostagem() {
 	}
 
 	return (
-		<Container maxWidth="sm" className="topo ">
+		<Container maxWidth="sm" className="backCadPost">
 			<form onSubmit={onSubmit} >
-				<Typography variant="h4" color="textSecondary" component="h1" align="center" >{id === undefined ? <span>Cadastre</span> : <span>Atualize</span>} sua postagem:</Typography>
+				<Typography variant="h4" component="h1" align="center" >{id === undefined ? <span>Cadastre</span> : <span>Atualize</span>} sua postagem:</Typography>
 				<FormControl >
 					<InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
 					<Select
@@ -178,7 +179,7 @@ function CadastroPostagem() {
 
 				<TextField value={postagem.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="foto" label="foto" name="foto" variant="outlined" placeholder='Insira a URL da sua foto' margin="normal" fullWidth required/>
 
-				<Button type='submit' variant='contained' className='botaoF'>
+				<Button type='submit' variant='contained' className='botaoPost'>
 					Finalizar
 				</Button>
 			</form>

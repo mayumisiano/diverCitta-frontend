@@ -1,0 +1,45 @@
+.topo {
+	margin-top: 30px;
+}
+
+.form1 {
+	border-radius: 17px;
+	border: none!important;
+	box-shadow: 2px 2px 1px 1px #615e5e;
+	text-align: center;
+	background-color: #cb9de1;
+	color: #3f1158 !important;
+    padding: 10px 5px 5px 5px !important;
+   
+}
+
+.botao{
+    background-color: #3f1158 !important;
+  width: 50px;
+  color: #d0e7be !important;
+  font-size: 17px !important;
+  letter-spacing: 1px !important;
+  
+}
+
+.botaoDel{
+    background-color:  #713691 !important;
+    color:#f3e7f5!important;
+    font-weight: "bold";
+    letter-spacing: 1px !important;
+    width: 30px ;
+    height: 30px;
+}
+
+.alinhar {
+    justify-content: center !important;
+   
+}
+
+.backDel{
+	padding: 110px;
+}
+
+.botoes{
+    color: rgb(9, 0, 12);
+}

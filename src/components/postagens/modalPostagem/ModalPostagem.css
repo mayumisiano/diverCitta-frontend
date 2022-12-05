@@ -3,8 +3,13 @@
 }
 
 .btnModal{
-    border-color: rgb(6, 9, 78);
-    background-color: #0a3c99 !important;
+    display: flex;
+    justify-content: space-between;
+    border-color: rgb(239, 236, 240);
+    background-color: #74477d !important;
     color: #ebf2e6 !important;
     font-weight: "bold";
+    width: 20%;
+    height: 30%;
 }
+

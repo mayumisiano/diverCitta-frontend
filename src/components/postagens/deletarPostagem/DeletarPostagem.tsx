@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 import Postagem from '../../../model/Postagem';
+import Container from '@mui/material/Container';
 
 function DeletarPostagem() {
 
@@ -73,35 +74,32 @@ function DeletarPostagem() {
 
 	return (
 		<>
-			<Box m={2}>
-				<Card variant="outlined" >
-					<CardContent>
-						<Box justifyContent="center">
-							<Typography color="textSecondary" gutterBottom>
-								Deseja deletar a Postagem:
-							</Typography>
-							<Typography color="textSecondary" >
-								{post?.titulo}
-							</Typography>
+		<div className='backDel' >
+		<Container >
+				<Box className='form1' justifyContent="center">
+					<Typography variant="h5" color="textSecondary" gutterBottom>
+						Deseja deletar a Postagem:
+					</Typography>
+					<Typography  variant="h6" color="textSecondary" >
+						{post?.titulo}
+					</Typography>
+					<Box className='boxBotao' display="flex" justifyContent="center" ml={1.0} mb={2} >
+						<Box mx={1.5}>
+							<Button className='botao' onClick={sim} variant="contained" size='large'>
+								Sim
+							</Button>
 						</Box>
+						<Box>
+							<Button className='botaoDel' onClick={nao} variant="contained" size='large'>
+								Não
+							</Button>
+						</Box>
+					</Box>
+				</Box>
+			</Container>
 
-					</CardContent>
-					<CardActions>
-						<Box display="flex" justifyContent="start" ml={1.0} mb={2} >
-							<Box mx={2}>
-								<Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
-									Sim
-								</Button>
-							</Box>
-							<Box>
-								<Button onClick={nao} variant="contained" size='large' color="secondary">
-									Não
-								</Button>
-							</Box>
-						</Box>
-					</CardActions>
-				</Card>
-			</Box>
+		</div>
+			
 		</>
 	);
 }

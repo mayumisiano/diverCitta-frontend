@@ -1,3 +1,19 @@
+.intropagina #titulo{
+	color: rgb(68, 13, 67);
+	background-image: url(https://static.vecteezy.com/system/resources/previews/003/588/032/original/pastel-ombre-background-in-pink-and-purple-vector.jpg);
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom:30px
+}
+
+.intropagina #subtitulo{	
+	background-color: #340a4b;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	
+}
+
 .card--content {	
 	background-image: url(https://static.vecteezy.com/system/resources/previews/003/588/032/original/pastel-ombre-background-in-pink-and-purple-vector.jpg);
 	display: flex;
@@ -7,9 +23,9 @@
 	padding: 0 10px;
 }
 
-.card--container {
+.card--container {	
 	width: 17rem;
-	border: 1px solid #3F1158;
+	border: 1px solid #9775a9;
 	box-shadow: 2px 2px 6px #4b4b4b;
 	display: flex;
 	align-items: center;
@@ -42,7 +58,7 @@
 
 .card-title {
 	line-height: 15px;
-	font-size: 18px;
+	font-size: 20px;
 	width: 100%;
 	text-align: center;
 	margin: 0.5rem 0 0.2rem 0;
@@ -55,7 +71,7 @@
 .card-title p {
 	color: #393939;
 	text-align: center;
-	font-size: 18px;
+	font-size: 20px;
 	padding: 10px 2px;
 }
 

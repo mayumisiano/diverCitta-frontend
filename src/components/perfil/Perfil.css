@@ -1,0 +1,48 @@
+.perfilContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.perfil {
+  box-shadow: 14px 15px 35px -6px #4e1b41;
+  border-radius: 25% 0% 10% 25% / 63% 25% 25% 0%;
+  padding: 1rem;
+}
+
+.imgPerfil {
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  border: 3px solid #6d00a0;
+}
+
+.postUser {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+.postPerfil {
+  -webkit-box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 0 1rem 1.5rem;
+}
+
+.perfil .css-149xwtl-MuiTypography-root {
+  font-family: cursive !important;
+}
+
+.back2p {
+  background-color: #b9eb90;
+  background-image: url(https://cdn.discordapp.com/attachments/1006363643341979721/1049727466899525652/MVZb9vz.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}

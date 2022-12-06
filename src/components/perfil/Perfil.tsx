@@ -1,63 +1,100 @@
-import { Avatar, Grid, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
+import {
+  Avatar,
+  Box,
+  Button,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Grid,
+  Typography,
+} from '@mui/material';
 import { Container } from '@mui/system';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { tokenToString } from 'typescript';
+import { Link } from 'react-router-dom';
 import User from '../../model/User';
-import { buscaId } from '../../services/Service';
+import { busca, buscaId } from '../../services/Service';
 import { TokenState } from '../../store/tokens/tokensReducer';
-
+import './Perfil.css';
 
 function Perfil() {
+  const token = useSelector<TokenState, TokenState['tokens']>(
+    state => state.tokens
+  );
 
-	const userId = useSelector<TokenState, TokenState['id']>(
-		(state) => state.id
-	)
+  const userId = useSelector<TokenState, TokenState['id']>(state => state.id);
 
-	const token = useSelector<TokenState, TokenState["tokens"]>(
-		(state) => state.tokens
-	);
+  const [user, setUser] = useState<User>({
+    id: 0,
+    nome: '',
+    usuario: '',
+    senha: '',
+    foto: '',
+    deficiencia: '',
+  });
 
-	const [usuario, setUser] = useState<User>({
-		id: +userId,
-		nome: '',
-		usuario: '',
-		senha: '',
-		foto: '',
-		deficiencia: ''
-	})
+  async function getUserById(id: number) {
+    await buscaId(`/usuarios/${id}`, setUser, {
+      headers: { Authorization: token },
+    });
+  }
 
-	async function getUserById(id: number) {
-		await buscaId(`/usuarios/${id}`, setUser, {
-			headers: {
-				Authorization: token
-			},
-		})
-	}
+  useEffect(() => {
+    getUserById(+userId);
+  }, []);
 
-	useEffect(() => {
-		getUserById(+userId)
-	}, [])
+  return (
+    <>
+      <div className="back2p">
+        <Container>
+          <div className="perfilContainer">
+            <Grid
+              xs={3}
+              alignItems="center"
+              justifyContent="center"
+              className="perfil"
+            >
+              <img src={user.foto} alt="" className="imgPerfil" />
+              <Typography variant="h5" align="center">
+                {user.nome} <br />
+                <br />
+                Deficiência: {user.deficiencia} <br />
+                <br />
+                Contato: {user.usuario}
+              </Typography>
+            </Grid>
+            <Grid xs={9} justifyContent="center" className="perfil">
+              <Typography variant="h4" align="center">
+                Postagens de {user.nome}
+              </Typography>
+              <Typography align="center">
+                <br />
+                Você tem um total de {user.postagem?.length} postagens
+                publicadas:
+              </Typography>
+              <div className="postUser">
+                {user.postagem?.map(post => (
+                  <div className="postPerfil">
+                    <h3>{post.titulo}</h3>
 
-	return (
-		<>
-			<Container>
-				<Grid container>
-					<Grid xs={6} alignItems="center" justifyContent="center">
-						<Avatar src={usuario.foto} alt="foto do usuário x" style={{ width: '15rem', height: '15rem', margin: '0 auto' }} />
-						<Typography variant="h5" align="center">{usuario.nome}</Typography>
-					</Grid>
-					<Grid xs={9} justifyContent="center">
-						<Typography variant="h4" align="center">Postagens de {usuario.nome}</Typography>
-						Você tem um total de {usuario.postagem?.length} postagens feitas
-						{usuario.postagem?.map((postagem) => (
-							<p>{postagem.titulo}</p>
-						))}
-					</Grid>
-				</Grid>
-			</Container>
-		</>
-	)
+                    <Typography variant="body2" component="p">
+                      <img src={post.foto} width="200px" height="190px" />
+                    </Typography>
+
+                    <p>{post.texto}</p>
+                    <strong> Tema: {post.tema?.descricao}</strong>
+                  </div>
+                ))}
+              </div>
+            </Grid>
+          </div>
+        </Container>
+      </div>
+    </>
+  );
 }
 
 export default Perfil;

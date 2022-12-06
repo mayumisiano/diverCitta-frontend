@@ -51,9 +51,9 @@ function Home() {
 							</Box>
 							<div className='configBotao11'>
 								<Box display="flex" justifyContent="center" >
-									<Button className='botao11'> <ModalPostagem /></Button>
+									<Button className='botao22'> <ModalPostagem /></Button>
 									<Link to='/posts' className='text-decorator-none '>
-										<Button variant="outlined" className='botao11'>Ver Postagens</Button>
+										<Button variant="outlined" className='botao22'>Ver Postagens</Button>
 									</Link>
 								</Box>
 							</div>
@@ -103,15 +103,12 @@ function Home() {
 								<Typography variant="h5" gutterBottom color="textPrimary"component="h5" align="center"
 									className='titulo2'>
 									Esses temas já rolam aqui do Divercittà e podemos criar novos !</Typography>
-							
-								<Box >
+							</Box>
+							<Box >
 									<Link to='/temas' className='text-decorator-none ' >
-										<Button variant="outlined" className='botao10'>Ver Temas</Button>
+										<Button variant="outlined" className='botao20'>Ver Temas</Button>
 									</Link>
 								</Box>
-						
-							</Box>
-
 							
 
 						</Grid>

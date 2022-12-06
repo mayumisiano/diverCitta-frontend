@@ -32,12 +32,12 @@
     color: #8a1dcd !important;
     font-weight: bold;
 }
-.botao10{
+.botao20{
     background-color: #74477d !important;
     color: white !important;
     font-size: 10px;
     letter-spacing: 2px !important;
-    right: 30%;
+    right: -42%;
 }
 .configBotao10{
     display:center;
@@ -51,11 +51,19 @@
     margin-left: 5px;
     right: 5%;
 }
-.botao11{
+.botao22{
     display:flex;
     justify-content: center;
-    flex-flow:wrap;  
+    flex-flow:wrap;
+    background-color: #74477d !important;
+    color: white !important;
+    font-size: 10px;
+    letter-spacing: 2px !important;
+    margin-left: 10px;
+    right: 5%;
+    height: 100%;
 }
+
 
 /* paleta de cores interessantes - acrescentem cores que curtam também :) 
 e depois verificamos se está nos padrões de acessibilidade

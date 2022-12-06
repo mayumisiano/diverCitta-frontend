@@ -82,7 +82,7 @@ function CadastroTema() {
 					progress: undefined,
 				});
 			} catch (error) {
-				toast.error("Erroooooou!", {
+				toast.error("Erro no servidor!", {
 					position: "top-right",
 					autoClose: 2000,
 					hideProgressBar: false,
@@ -111,7 +111,7 @@ function CadastroTema() {
 					progress: undefined,
 				});
 			} catch (error) {
-				toast.error("Erroooooou!", {
+				toast.error("Erro no servidor!", {
 					position: "top-right",
 					autoClose: 2000,
 					hideProgressBar: false,

@@ -106,6 +106,4 @@ function DeletarTema() {
     );
 }
 
-
-
 export default DeletarTema;

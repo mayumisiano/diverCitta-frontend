@@ -2,14 +2,17 @@
     cursor: pointer;
 }
 
-.btnModal{
-    display: flex;
-    justify-content: space-between;
-    border-color: rgb(239, 236, 240);
-    background-color: #74477d !important;
-    color: #ebf2e6 !important;
-    font-weight: "bold";
-    width: 20%;
-    height: 30%;
+.configBotao11{
+    display:center;
+    justify-content: center;
+    flex-flow:row wrap;   
 }
-
+.botao11{
+    background-color: #74477d !important;
+    color: white !important;
+    font-size: 10px;
+    letter-spacing: 2px !important;
+    margin-left: 5px;
+    right: 5%;
+    
+}

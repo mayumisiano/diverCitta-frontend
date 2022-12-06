@@ -55,8 +55,8 @@ function ModalPostagem() {
 	);
 
 	return (
-		<div>
-			<Button className="btnModal" onClick={handleOpen}>Nova Postagem</Button>
+		<div  className='configBotao11'>
+			<Button className="botao11" onClick={handleOpen}>Nova Postagem</Button>
 			<Modal
 				open={open} onClose={handleClose} aria-labelledby="simple-modal-title"
 				aria-describedby="simple-modal-description">

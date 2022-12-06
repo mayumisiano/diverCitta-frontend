@@ -11,28 +11,12 @@
     font-weight: bold;
 
 }
-
-.botao2{
-    display: flex;
-    justify-content: space-between;
-    border-color: rgb(239, 236, 240);
-    background-color: #74477d !important;
-    color: #ebf2e6 !important;
-    font-weight: "bold";
-    width: 50%;
-    height: 60%;
-}
-
 .postagens{
     background-color: #210404 !important;
 }
-
 .loginPage{
     width: 500vw;
     min-height: calc(100vh-64px);
-}
-.espacoBotao{
-    padding: 10%;
 }
 .altura{
     min-height: 10vh !important;
@@ -43,11 +27,34 @@
 .titulo3{
     color: #2b50cb !important;
     font-weight: bold;
-
 }
 .titulo2{
     color: #8a1dcd !important;
     font-weight: bold;
+}
+.botao10{
+    background-color: #74477d !important;
+    color: white !important;
+    font-size: 10px;
+    letter-spacing: 2px !important;
+    right: 30%;
+}
+.configBotao10{
+    display:center;
+    justify-content: center;
+    flex-flow:wrap;    
+}
+.configBotao11{
+    color: white !important;
+    font-size: 10px;
+    letter-spacing: 2px !important;
+    margin-left: 5px;
+    right: 5%;
+}
+.botao11{
+    display:flex;
+    justify-content: center;
+    flex-flow:wrap;  
 }
 
 /* paleta de cores interessantes - acrescentem cores que curtam também :) 

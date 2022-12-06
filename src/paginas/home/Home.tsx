@@ -45,8 +45,7 @@ function Home() {
                                     Sejam bem vindes à DiverCittà!</Typography>
                                 <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>
                                     Aqui falamos sobre apoio, inclusão e diversidade!
-                                    Venham se incluir !
-                                    Façam parte dessa mudança! </Typography>
+                                     </Typography>
                             </Box>
                             <div className='configBotao11'>
                                 <Box display="flex" justifyContent="center" >
@@ -78,9 +77,10 @@ function Home() {
                                 <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo3'>
                                     SOBRE A DIVERCITTÀ </Typography>
                                 <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo3'>
-                                    Somos uma rede social com a missão de disponibilizar um ambiente seguro e acolhedor para interação para pessoas com Deficiência e
-                                    seus familiares. Nós do DIVERCITTÀ sabemos que a falta de inclusão tem grande impacto em nossas vidas. Assim transformando o
-                                    DIVERCITTÀ em um espaço acolhedor e seguro para se conectar. </Typography>
+                                    Somos uma rede social com a missão de disponibilizar um ambiente seguro e acolhedor para interação das pessoas com Deficiência e
+                                    seus familiares, amigos e pessoas que apoiam a causa.
+                                    Nós do DIVERCITTÀ sabemos que a falta de inclusão tem grande impacto em nossas vidas. 
+                                    Assim transformando o DIVERCITTÀ em um espaço acolhedor e seguro para se conectar. </Typography>
                             </Box>
                         </Grid>
 

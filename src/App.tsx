@@ -18,6 +18,7 @@ import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPosta
 import ListaTema from './components/temas/listaTema/ListaTema';
 import Sobre from './paginas/Sobre/index';
 import Perfil from './components/perfil/Perfil';
+import ListaUsuario from './components/usuarios/ListaUsuario';
 
 function App() {
   return (
@@ -36,6 +37,8 @@ function App() {
             <Route path="/perfil" element={<Perfil />} />
 
             <Route path="/sobre-nos" element={<Sobre />} />
+
+            <Route path="/usuarios" element={<ListaUsuario />} />
 
             <Route path="/login" element={<Login />} />
 

@@ -19,52 +19,54 @@ import ListaTema from './components/temas/listaTema/ListaTema';
 import Sobre from './paginas/Sobre/index';
 import Perfil from './components/perfil/Perfil';
 
-
 function App() {
-	return (
-		<Provider store={store}>
-			<ToastContainer />
-			<Router>
-				<Navbar />
-				<div style={{ minHeight: '100vh' }}>
-					<Routes>
+  return (
+    <Provider store={store}>
+      <ToastContainer />
+      <Router>
+        <Navbar />
+        <div style={{ minHeight: '100vh' }}>
+          <Routes>
+            <Route path="/" element={<Login />} />
 
-						<Route path="/" element={<Login />} />
+            <Route path="/home" element={<Home />} />
 
-						<Route path="/home" element={<Home />} />
+            <Route path="/cadastrousuario" element={<CadastroUsuario />} />
 
-						<Route path="/cadastrousuario" element={<CadastroUsuario />} />
+            <Route path="/perfil" element={<Perfil />} />
 
-						<Route path="/sobre-nos" element={<Sobre />} />
+            <Route path="/sobre-nos" element={<Sobre />} />
 
-						<Route path="/login" element={<Login />} />
+            <Route path="/login" element={<Login />} />
 
-						<Route path="/temas" element={<ListaTema />} />
+            <Route path="/temas" element={<ListaTema />} />
 
-						<Route path="/cadastrousuario" element={<CadastroUsuario />} />
+            <Route path="/cadastrousuario" element={<CadastroUsuario />} />
 
-						<Route path="/posts" element={<ListaPostagem />} />
+            <Route path="/posts" element={<ListaPostagem />} />
 
-						<Route path="/formularioPostagem" element={<CadastroPostagem />} />
+            <Route path="/formularioPostagem" element={<CadastroPostagem />} />
 
-						<Route path="/formularioPostagem/:id" element={<CadastroPostagem />} />
+            <Route
+              path="/formularioPostagem/:id"
+              element={<CadastroPostagem />}
+            />
 
-						<Route path="/formularioTema" element={<CadastroTema />} />
+            <Route path="/formularioTema" element={<CadastroTema />} />
 
-						<Route path="/formularioTema/:id" element={<CadastroTema />} />
+            <Route path="/formularioTema/:id" element={<CadastroTema />} />
 
-						<Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+            <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
 
-						<Route path="/deletarTema/:id" element={<DeletarTema />} />
+            <Route path="/deletarTema/:id" element={<DeletarTema />} />
 
-						<Route path="/perfilUsuario/" element={<Perfil/>}/>
-
-					</Routes>
-				</div>
-				<Footer />
-			</Router>
-		</Provider>
-	);
+            <Route path="/perfilUsuario/" element={<Perfil />} />
+          </Routes>
+        </div>
+        <Footer />
+      </Router>
+    </Provider>
+  );
 }
 
 export default App;

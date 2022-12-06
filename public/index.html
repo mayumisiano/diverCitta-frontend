@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="15x15" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Rede social feita a partir da ODS 11 da ONU"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <title>Divercitta</title>
+  </head>
 
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
 
-  <title>Divercitta</title>
-</head>
-
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
     </div>
-  </div>
-  <!-- Userway -->
-  <script>
-    (function (d) {
-      var s = d.createElement("script");
-      s.setAttribute("data-account", "GXu4TnQ4yd");
-      s.setAttribute("src", "https://accessibilityserver.org/widget.js");
-      (d.body || d.head).appendChild(s);
-    })(document);
-  </script>    
-  <noscript
-    >Please ensure Javascript is enabled for purposes of
-    <a href="https://accessibilityserver.org"
-      >website accessibility</a
-    ></noscript
-  >
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-
-</body>
-
+    <!-- Userway -->
+    <script>
+      (function (d) {
+        var s = d.createElement('script');
+        s.setAttribute('data-account', 'GXu4TnQ4yd');
+        s.setAttribute('src', 'https://accessibilityserver.org/widget.js');
+        (d.body || d.head).appendChild(s);
+      })(document);
+    </script>
+    <noscript
+      >Please ensure Javascript is enabled for purposes of
+      <a href="https://accessibilityserver.org"
+        >website accessibility</a
+      ></noscript
+    >
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+  </body>
 </html>

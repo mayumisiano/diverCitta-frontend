@@ -66,7 +66,7 @@ function Perfil() {
                 Contato: {user.usuario}
               </Typography>
             </Grid>
-            <Grid xs={9} justifyContent="center" className="perfil">
+            <Grid xs={9} justifyContent="center" className="perfil2">
               <Typography variant="h4" align="center">
                 Postagens de {user.nome}
               </Typography>
@@ -78,7 +78,10 @@ function Perfil() {
               <div className="postUser">
                 {user.postagem?.map(post => (
                   <div className="postPerfil">
-                    <h3>{post.titulo}</h3>
+                    <Typography variant="h6" component="h2">{post.titulo}</Typography>
+                    <Typography variant="body1" component="p">
+                      Postado em: {new Date(Date.parse(post.data)).toLocaleDateString()} <br />
+                    </Typography>
 
                     <Typography variant="body2" component="p">
                       <img src={post.foto} width="200px" height="190px" />

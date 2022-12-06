@@ -11,6 +11,14 @@
   padding: 1rem;
 }
 
+.perfil2
+{
+  box-shadow: 14px 15px 35px -6px #4e1b41;
+  border-radius: 0.5% 7% 0.5% 4% / 21% 15% 25% 16%;
+  padding: 1rem;
+}
+/*25% 0% 10% 25% / 63% 25% 25% 0%;*/
+
 .imgPerfil {
   width: 80%;
   aspect-ratio: 1;
@@ -44,5 +52,6 @@
   background-image: url(https://cdn.discordapp.com/attachments/1006363643341979721/1049727466899525652/MVZb9vz.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 2px;
   min-height: 100vh;
 }

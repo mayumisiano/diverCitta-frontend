@@ -1,38 +1,67 @@
-.caixa
-{
+.caixa{
     background-color: #b9eb90;
     background-image: url(https://imgur.com/MVZb9vz.png);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
-.titulo
-{
+.titulo{
     color: #2bcb53 !important;
     font-weight: bold;
 
 }
-
-.botao2
-{
-    border-color: rgb(239, 236, 240);
-    background-color: #74477d !important;
-    color: #ebf2e6 !important;
-    font-weight: "bold";
-}
-
-.postagens
-{
+.postagens{
     background-color: #210404 !important;
 }
-
-.loginPage
-{
-    width: 100vw;
+.loginPage{
+    width: 500vw;
     min-height: calc(100vh-64px);
 }
-.espacoBotao{
-    padding: 5%;
+.altura{
+    min-height: 10vh !important;
+}
+.imagem{
+    width: 50vw;
+}
+.titulo3{
+    color: #2b50cb !important;
+    font-weight: bold;
+}
+.titulo2{
+    color: #8a1dcd !important;
+    font-weight: bold;
+}
+.botao20{
+    background-color: #74477d !important;
+    color: white !important;
+    font-size: 10px;
+    letter-spacing: 2px !important;
+    right: -42%;
+}
+.configBotao10{
+    display:center;
+    justify-content: center;
+    flex-flow:wrap;    
+}
+.configBotao11{
+    color: white !important;
+    font-size: 10px;
+    letter-spacing: 2px !important;
+    margin-left: 5px;
+    right: 5%;
+}
+.botao22{
+    display:flex;
+    justify-content: center;
+    flex-flow:wrap;
+    background-color: #74477d !important;
+    color: white !important;
+    font-size: 10px;
+    letter-spacing: 2px !important;
+    margin-left: 10px;
+    right: 5%;
+    height: 100%;
 }
 
 /* paleta de cores interessantes - acrescentem cores que curtam também :) 
